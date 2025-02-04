@@ -9,7 +9,7 @@ main {}
 }
 
 .maze-button {
-  background-color: rgb(41, 171, 110);
+  background-color: rgb(18, 49, 164);
   margin: 10px;
   color: white;
   cursor: pointer;
@@ -49,7 +49,7 @@ main {}
 }
 
 .cell.start {
-  background-color: yellow;
+  background-color: rgb(17, 194, 38);
 }
 
 .cell.end {
