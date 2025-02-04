@@ -8,9 +8,26 @@ export default function MazeGrid() {
   ["wall", "wall", "path ", "end"],
   ];
 
+  function generateMaze(height, width) {
+    let matrix = [];
+    for (let i = 0; i < height; i++) {
+      let row = [];
+      for (let j = 0; j < width; j++) {
+        let cell = Math.random() < 0.3 ? "wall" : "path";
+        if (cell < 0.5) {
+          row.push("wall");
+        } else {
+          row.push("path");
+        }
+      }
+      matrix.push(row);
+    }
+    console.log(matrix);
+  }
+
   return (
     <div className="maze-grid">
-      <button className="maze-button">Refresh Maze</button>
+      <button className={"maze-button"} onClick={() => generateMaze(5, 6)}>Refresh Maze</button>
       <div className={"maze"}>
         {maze.map((row, rowIndex) => (
           <div className="row">
